@@ -1,0 +1,13 @@
+# IDEs
+.idea/
+
+# Dependencies
+node_modules/
+
+# TypeScript build output
+dist/
+
+# Environment variables
+.env
+.env.*
+!.env.example
