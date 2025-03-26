@@ -1,0 +1,14 @@
+{
+  "name": "modern-nodejs-starter",
+  "version": "1.0.0",
+  "description": "A starting point for modern Node.js projects with TypeScript support and more!",
+  "license": "MIT",
+  "author": "Panos Angel (https://angelidakis.net)",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/panosangel/modern-nodejs-starter.git"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  }
+}
