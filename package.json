@@ -8,6 +8,7 @@
     "type": "git",
     "url": "git+https://github.com/panosangel/modern-nodejs-starter.git"
   },
+  "type": "module",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
