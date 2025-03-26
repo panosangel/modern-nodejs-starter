@@ -10,6 +10,7 @@
   },
   "type": "module",
   "scripts": {
+    "start_node": "node --watch --experimental-strip-types --experimental-transform-types --no-warnings=ExperimentalWarning src/index.ts",
     "start_tsx": "tsx --watch src/index.ts",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
