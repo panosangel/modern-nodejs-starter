@@ -2,5 +2,8 @@
   "extends": "@total-typescript/tsconfig/bundler/no-dom/app",
   "compilerOptions": {
     /* Visit https://aka.ms/tsconfig to read more about this file */
+    /* Node Stuff */
+    "allowImportingTsExtensions": true,
+    "rewriteRelativeImportExtensions": true
   }
 }
