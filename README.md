@@ -4,27 +4,23 @@ A starting point for modern Node.js projects with TypeScript support and more!
 
 ## Quick Start
 
-TypeScript can be run using 2 different ways:
-- tsx
-- Node.js experimental feature! (preferable)
+Run the project using Node.js type-stripping internal feature:
 
-Both approaches remove TypeScript types and other features, without performing any type-checking. It's similar to how the Bun runtime works ;)
+`npn run dev`
 
-Therefore, it's important to always run `tsc --noEmit` to ensure the TypeScript code is valid before deploying to production.
+**Note:** This approach does not perform any type-checking. We rely on ESLint and IDE for early error/warning handling.
+
+## Build
+
+Before transpiling to JavaScript, it's important to always run `npm run typecheck` to ensure the TypeScript code is valid before deploying to production.
+
+Build with `npm run build` and enjoy ;)
 
 ## Linting and Formatting
 
 ### ESLint
 
-Command `npm init @eslint/config@latest` was run and have been configured as follows:
-
-```
-✔ How would you like to use ESLint? · problems
-✔ What type of modules does your project use? · esm
-✔ Which framework does your project use? · none
-✔ Does your project use TypeScript? · typescript
-✔ Where does your code run? · node
-```
+The configuration is focusing on Node.js and TypeScript enforcing reasonale rules.
 
 _Note that it might be needed to configure you IDE of preference to use ESLint as the selected linter._
 
