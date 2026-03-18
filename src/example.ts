@@ -7,7 +7,11 @@ function printLogMessage(status: Status, message: string = '') {
 }
 
 class Logger {
-  constructor(private status: Status) {}
+  private status: Status;
+
+  constructor(status: Status) {
+    this.status = status;
+  }
 
   printMessage(message: string): void {
     console.log(`[${this.status}] ${message}`);
