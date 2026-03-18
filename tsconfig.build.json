@@ -1,10 +1,15 @@
+// tsconfig.build.json - compiled output (production)
 {
-  "extends": "@total-typescript/tsconfig/tsc/no-dom/app",
+  "extends": "./tsconfig.base.json",
   "compilerOptions": {
-    /* Visit https://aka.ms/tsconfig to read more about this file */
-    "outDir": "dist",
-    /* Node Stuff */
-    "allowImportingTsExtensions": true,
-    "rewriteRelativeImportExtensions": true
-  }
+    "allowImportingTsExtensions": false,
+    "noEmit": false,
+    "outDir": "./dist",
+    "rootDir": "./src",
+    "declaration": true,
+    "declarationMap": true,
+    "sourceMap": true
+  },
+  "include": ["src/**/*"],
+  "exclude": ["node_modules", "dist"]
 }
