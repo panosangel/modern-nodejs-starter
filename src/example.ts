@@ -1,8 +1,8 @@
-const name: string = 'Panos';
+const name: string = "Panos";
 
-type Status = 'INIT' | 'DRAFT' | 'COMPLETED' | 'CANCELED';
+type Status = "INIT" | "DRAFT" | "COMPLETED" | "CANCELED";
 
-function printLogMessage(status: Status, message: string = '') {
+function printLogMessage(status: Status, message: string = "") {
   console.log(`[${status}] ${message}`);
 }
 
@@ -18,9 +18,9 @@ class Logger {
   }
 }
 
-printLogMessage('INIT', 'Hello World!');
+printLogMessage("INIT", "Hello World!");
 
-const completedLogger = new Logger('COMPLETED');
-completedLogger.printMessage('...and Goodbye!');
+const completedLogger = new Logger("COMPLETED");
+completedLogger.printMessage("...and Goodbye!");
 
 export { name, type Status, Logger, printLogMessage };
