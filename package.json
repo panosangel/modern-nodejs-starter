@@ -9,15 +9,19 @@
     "url": "git+https://github.com/panosangel/modern-nodejs-starter.git"
   },
   "type": "module",
+  "engines": {
+    "node": ">=24.0.0"
+  },
   "scripts": {
-    "start_node": "node --watch --experimental-strip-types --experimental-transform-types --no-warnings=ExperimentalWarning src/index.ts",
-    "start_tsx": "tsx --watch src/index.ts",
-    "type-checking": "tsc --watch --noEmit",
+    "dev": "node --watch src/index.ts",
+    "typecheck": "tsc --project tsconfig.json --noEmit",
     "test": "echo \"Error: no test specified\" && exit 1",
-    "lint": "npx eslint .",
-    "lint:fix": "npx eslint . --fix ",
-    "format": "npx prettier --check .",
-    "format:fix": "npx prettier --write ."
+    "lint": "eslint src/",
+    "lint:fix": "eslint . --fix ",
+    "format": "prettier --check .",
+    "format:fix": "prettier --write .",
+    "build": "tsc --project tsconfig.build.json",
+    "start": "node dist/index.js"
   },
   "devDependencies": {
     "@eslint/js": "^9.23.0",
