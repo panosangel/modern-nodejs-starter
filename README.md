@@ -6,7 +6,7 @@ A starting point for modern Node.js projects with TypeScript support and more!
 
 Run the project using Node.js type-stripping internal feature:
 
-`npn run dev`
+`npm run dev`
 
 **Note:** This approach does not perform any type-checking. We rely on ESLint and IDE for early error/warning handling.
 
