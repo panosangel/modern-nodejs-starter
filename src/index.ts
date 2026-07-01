@@ -1,2 +1,1 @@
-import * as example from './example.ts';
-
+import * as example from "./example.ts";

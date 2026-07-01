@@ -1,15 +1,22 @@
-import { defineConfig } from "eslint/config";
-import globals from "globals";
-import js from "@eslint/js";
+import eslintConfigPrettier from "eslint-config-prettier/flat";
 import tseslint from "typescript-eslint";
+import eslint from "@eslint/js";
+import globals from "globals";
 
-
-export default defineConfig([
-  {
-    ignores: ["dist/", "tsconfig.json"] // acts as global ignores, due to the absence of other properties
-  },
-  { files: ["**/*.{js,mjs,cjs,ts}"] },
-  { files: ["**/*.{js,mjs,cjs,ts}"], languageOptions: { globals: globals.node } },
-  { files: ["**/*.{js,mjs,cjs,ts}"], plugins: { js }, extends: ["js/recommended"] },
-  tseslint.configs.recommended,
-]);
+export default tseslint.config(
+    {
+      ignores: ["dist/", "node_modules/"],
+    },
+    eslint.configs.recommended,
+    tseslint.configs.recommendedTypeChecked,
+    eslintConfigPrettier,             // Disables ESLint rules that conflict with Prettier
+    {
+      languageOptions: {
+        globals: globals.node,        // Prevents false positives on Node.js globals
+        parserOptions: {
+          projectService: true,       // Connects to tsconfig.json for type-aware linting
+          tsconfigRootDir: import.meta.dirname,
+        },
+      },
+    },
+);
